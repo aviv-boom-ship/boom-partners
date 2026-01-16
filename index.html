@@ -787,8 +787,25 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        .footer-left {
-            text-align: left;
+        .footer-cta {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .footer-cta .btn-primary {
+            padding: 28px 72px;
+            font-size: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(76, 103, 219, 0.5);
+        }
+
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(76, 103, 219, 0.6);
+        }
+
+        .footer-info {
+            text-align: center;
         }
 
         .footer-logo {
@@ -812,37 +829,14 @@
             text-decoration: underline;
         }
 
-        .footer-cta {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .footer-cta .btn-primary {
-            padding: 28px 72px;
-            font-size: 1.5rem;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 30px rgba(76, 103, 219, 0.5);
-        }
-
-        .footer-cta .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(76, 103, 219, 0.6);
-        }
-
         .footer-bottom {
             margin-top: 40px;
             padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: left;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
-            .footer-left {
-                text-align: center;
-            }
-            .footer-bottom {
-                text-align: center;
-            }
             .footer-cta .btn-primary {
                 padding: 22px 48px;
                 font-size: 1.25rem;
@@ -1224,13 +1218,13 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div class="footer-left">
+            <div class="footer-cta">
+                <a href="https://www.boomnow.com/see-boom-in-action" class="btn btn-primary">Book Your Demo →</a>
+            </div>
+            <div class="footer-info">
                 <div class="footer-logo">Boom</div>
                 <p>The World's First AI-Powered Property Management System</p>
                 <p style="margin-top: 12px;"><a href="https://www.boomnow.com">boomnow.com</a></p>
-            </div>
-            <div class="footer-cta">
-                <a href="https://www.boomnow.com/see-boom-in-action" class="btn btn-primary">Book Your Demo →</a>
             </div>
             <div class="footer-bottom">
                 <p style="font-size: 0.85rem;">© 2026 Boom. All rights reserved.</p>
