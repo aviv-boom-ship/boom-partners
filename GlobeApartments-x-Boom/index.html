@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globe Apartments × Boom | Unlock Your Property Management Potential</title>
+    <meta name="description" content="See how Globe Apartments can transform operations with Boom's AI-powered property management platform.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           PRD 3: BOOM BRAND THEMING SYSTEM
+        ============================================ */
+        :root {
+            /* Primary Colors */
+            --primary-blue: #4C67DB;
+            --primary-blue-light: #5672E9;
+            --primary-blue-dark: #3A4FA8;
+
+            /* Background Colors */
+            --bg-dark: #161616;
+            --bg-dark-secondary: #1A1A1A;
+            --bg-light: #FBFEFB;
+            --bg-white: #FFFFFF;
+
+            /* Text Colors */
+            --text-dark: #161616;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255,255,255,0.7);
+            --text-muted-dark: #6B7280;
+
+            /* Typography */
+            --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+
+            /* Font Weights */
+            --fw-regular: 400;
+            --fw-medium: 500;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+            --fw-extrabold: 800;
+
+            /* Spacing */
+            --section-padding: clamp(60px, 8vw, 120px);
+            --container-max: 1280px;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-elevated: 0 10px 40px rgba(0,0,0,0.15);
+
+            /* Gradients */
+            --gradient-heading: linear-gradient(146deg, #FFFFFF 0%, #5672E9 100%);
+            --gradient-cta: linear-gradient(135deg, #4C67DB 0%, #5672E9 100%);
+
+            /* Accent */
+            --accent-pink: #E91E63;
+            --accent-star: #FFD700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-primary);
+            font-weight: var(--fw-bold);
+            line-height: 1.2;
+        }
+
+        /* Typography Scale */
+        .heading-xl { font-size: clamp(42px, 6vw, 76px); font-weight: 700; }
+        .heading-lg { font-size: clamp(32px, 4vw, 48px); font-weight: 700; }
+        .heading-md { font-size: clamp(24px, 3vw, 32px); font-weight: 600; }
+        .body-lg { font-size: 18px; line-height: 1.6; }
+        .body-md { font-size: 16px; line-height: 1.5; }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: var(--fw-semibold);
+            font-family: var(--font-primary);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-cta);
+            color: var(--text-light);
+            box-shadow: 0 4px 12px rgba(76, 103, 219, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 103, 219, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: var(--gradient-heading);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================
+           HERO SECTION
+        ============================================ */
+        .hero {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
+            color: var(--text-light);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(76, 103, 219, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(76, 103, 219, 0.2);
+            border: 1px solid rgba(76, 103, 219, 0.3);
+            padding: 10px 20px;
+            border-radius: var(--radius-full);
+            font-size: 15px;
+            font-weight: var(--fw-medium);
+            margin-bottom: 28px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: var(--fw-extrabold);
+            margin-bottom: 24px;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        /* ============================================
+           PRD 1: TRUST SECTION (LEMONADE-STYLE)
+        ============================================ */
+
+        /* Press Logo Marquee */
+        .press-section {
+            padding: 40px 0;
+            background: var(--bg-light);
+            overflow: hidden;
+        }
+
+        .press-label {
+            text-align: center;
+            font-size: 12px;
+            font-weight: var(--fw-semibold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted-dark);
+            margin-bottom: 24px;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-container::before,
+        .marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--bg-light) 0%, transparent 100%);
+        }
+
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(-90deg, var(--bg-light) 0%, transparent 100%);
+        }
+
+        .marquee-track {
+            display: flex;
+            animation: marquee 30s linear infinite;
+            width: fit-content;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .press-logo {
+            height: 24px;
+            width: auto;
+            margin: 0 40px;
+            opacity: 0.5;
+            filter: grayscale(100%);
+            transition: opacity 0.3s, filter 0.3s;
+        }
+
+        .press-logo:hover {
+            opacity: 0.8;
+            filter: grayscale(50%);
+        }
+
+        /* Trust Header with Stars */
+        .trust-header {
+            padding: 60px 0 40px;
+            background: var(--bg-white);
+            text-align: center;
+        }
+
+        .trust-headline {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: var(--fw-bold);
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .trust-subtext {
+            font-size: 16px;
+            color: var(--text-muted-dark);
+            margin-bottom: 20px;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .star {
+            font-size: 32px;
+            color: var(--accent-star);
+            animation: starPulse 2s ease-in-out infinite;
+        }
+
+        .star:nth-child(2) { animation-delay: 0.1s; }
+        .star:nth-child(3) { animation-delay: 0.2s; }
+        .star:nth-child(4) { animation-delay: 0.3s; }
+        .star:nth-child(5) { animation-delay: 0.4s; }
+
+        @keyframes starPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Social Media Style Testimonial Carousel */
+        .social-testimonials {
+            padding: 0 0 80px;
+            background: var(--bg-white);
+            overflow: hidden;
+        }
+
+        .social-carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .social-carousel-track {
+            display: flex;
+            animation: socialScroll 40s linear infinite;
+            width: fit-content;
+        }
+
+        .social-carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes socialScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .social-card {
+            flex-shrink: 0;
+            width: 340px;
+            background: var(--bg-white);
+            border: 1px solid #E5E7EB;
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin: 0 12px;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .social-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .social-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .social-author h4 {
+            font-size: 15px;
+            font-weight: var(--fw-semibold);
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .social-author p {
+            font-size: 13px;
+            color: var(--text-muted-dark);
+        }
+
+        .social-body {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .social-body .mention {
+            color: var(--primary-blue);
+            font-weight: var(--fw-medium);
+        }
+
+        /* ============================================
+           PRD 2: VIDEO TESTIMONIAL CAROUSEL (BOOM-STYLE)
+        ============================================ */
+        .video-testimonials {
+            padding: var(--section-padding) 0;
+            background: var(--bg-dark);
+        }
+
+        .video-testimonials .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .video-testimonials .section-title h2 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: var(--fw-bold);
+            background: var(--gradient-heading);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .video-carousel {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .video-slide {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .video-slide.active {
+            display: grid;
+        }
+
+        @media (max-width: 768px) {
+            .video-slide.active {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .video-thumbnail-wrapper {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-thumbnail-wrapper img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .video-thumbnail-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 72px;
+            background: rgba(76, 103, 219, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 8px 32px rgba(76, 103, 219, 0.4);
+        }
+
+        .video-play-btn::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 22px solid white;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            margin-left: 6px;
+        }
+
+        .video-thumbnail-wrapper:hover .video-play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-quote-block {
+            color: var(--text-light);
+        }
+
+        .video-quote-text {
+            font-size: clamp(18px, 2.5vw, 24px);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            font-weight: var(--fw-regular);
+        }
+
+        .video-quote-author h4 {
+            font-size: 18px;
+            font-weight: var(--fw-semibold);
+            margin-bottom: 4px;
+        }
+
+        .video-quote-author p {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* Carousel Navigation */
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--text-light);
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-blue-light);
+            transform: scale(1.2);
+        }
+
+        /* ============================================
+           PRD 4: STATS SECTION
+        ============================================ */
+        .stats-section {
+            padding: var(--section-padding) 0;
+            background: var(--bg-dark-secondary);
+        }
+
+        .stats-section .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .stats-section .section-title h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: var(--fw-bold);
+            background: var(--gradient-heading);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .stat-value {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: var(--fw-regular);
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-muted-dark);
+        }
+
+        /* ============================================
+           PAIN POINTS
+        ============================================ */
+        .pain-points {
+            padding: var(--section-padding) 0;
+            background: var(--bg-white);
+        }
+
+        .pain-points h2 {
+            font-size: clamp(32px, 4vw, 42px);
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pain-card {
+            background: var(--bg-light);
+            border: 1px solid #E5E7EB;
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            transition: all 0.3s;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .pain-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+
+        .pain-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 14px;
+            color: var(--text-dark);
+        }
+
+        .pain-card p {
+            font-size: 1.05rem;
+            color: var(--text-muted-dark);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TRANSFORMATION
+        ============================================ */
+        .transformation {
+            padding: var(--section-padding) 0;
+            background: #FFFDF8;
+            color: var(--text-dark);
+        }
+
+        .transformation h2 {
+            font-size: clamp(36px, 5vw, 52px);
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+
+        .transformation-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-muted-dark);
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        /* ============================================
+           BEFORE & AFTER
+        ============================================ */
+        .before-after {
+            padding: var(--section-padding) 0;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .before-after h2 {
+            font-size: clamp(32px, 4vw, 42px);
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+
+        .before-after-image img {
+            max-width: 100%;
+            width: 900px;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .transform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .transform-item {
+            text-align: center;
+        }
+
+        .transform-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(76, 103, 219, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 48px;
+        }
+
+        .transform-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .transform-item p {
+            font-size: 1.15rem;
+            color: var(--text-muted-dark);
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        footer {
+            padding: 80px 0 50px;
+            background: var(--bg-dark);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-cta {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .footer-cta .btn-primary {
+            padding: 28px 72px;
+            font-size: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(76, 103, 219, 0.5);
+        }
+
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(76, 103, 219, 0.6);
+        }
+
+        .footer-info {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: var(--fw-bold);
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: var(--primary-blue-light);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .footer-cta .btn-primary {
+                padding: 22px 48px;
+                font-size: 1.25rem;
+            }
+        }
+
+
+        /* ============================================
+           ANIMATIONS
+        ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track,
+            .social-carousel-track {
+                animation: none;
+            }
+            .star {
+                animation: none;
+            }
+            * {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        /* ============================================
+           RESPONSIVE
+        ============================================ */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .social-card {
+                width: 300px;
+            }
+
+            .press-logo {
+                height: 18px;
+                margin: 0 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><span>✨</span> Built for property managers like you</div>
+                <h1>Globe Apartments × <span class="gradient-text">Boom</span></h1>
+                <p class="hero-subtitle">Since 1981, you've been one of London's longest established serviced apartment operators with 54 properties across Central London, Camden & Marylebone. Now it's time for technology that matches your legacy.</p>
+                <div class="hero-cta">
+                    <a href="https://www.boomnow.com/see-boom-in-action" class="btn btn-primary">Book Your Demo →</a>
+                    <a href="https://www.youtube.com/watch?v=CsbMhEKqM8k" class="btn btn-secondary" target="_blank">Watch Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST HEADER -->
+    <section class="trust-header">
+        <h2 class="trust-headline">The World's 1st AI PMS & Fastest Growing</h2>
+    </section>
+
+    <!-- PRD 1: SOCIAL MEDIA STYLE TESTIMONIALS -->
+    <section class="social-testimonials">
+        <div class="social-carousel-container">
+            <div class="social-carousel-track">
+                <!-- Card 1 -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/6931665f6882edd2e0c5cf53_Freddy%2C%20Eason%20stays.avif" alt="Freddy" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Freddy</h4>
+                            <p>@easonstays</p>
+                        </div>
+                    </div>
+                    <p class="social-body"><span class="mention">@boomnow</span> allowed us to centralize all of our tech stacks which make it less confusing with the team and overall more efficient.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/68dcf8b8b38ff6423301f585_Sab-avatar_zzzing.avif" alt="Sab Mulligan" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Sab Mulligan</h4>
+                            <p>@zzzing_malta</p>
+                        </div>
+                    </div>
+                    <p class="social-body">We're now in a position to attract creatives and true hospitality lovers to our team, because it is no longer a call center. Thanks <span class="mention">@boomnow</span>!</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/68c3f5953e39f1e2c28387a3_1755110636139.avif" alt="Jonathan Ellse" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Jonathan Ellse</h4>
+                            <p>@perchshortstays</p>
+                        </div>
+                    </div>
+                    <p class="social-body">The relationship with <span class="mention">@boomnow</span> has felt like more than just business. I've felt the genuine interest in helping us grow.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/68b172c5974067ae1d7537c1_dean_euphoric-leisure_avatar.avif" alt="Dean McLuckie" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Dean McLuckie</h4>
+                            <p>@euphoricleisure</p>
+                        </div>
+                    </div>
+                    <p class="social-body"><span class="mention">@boomnow</span>'s support has been leagues ahead of any PMS we've used before. You don't feel like just another subscription.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/685d20fdd0064da6a0629745_1728855846500.avif" alt="Joakim Thörn" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Joakim Thörn</h4>
+                            <p>@guestlyhomes</p>
+                        </div>
+                    </div>
+                    <p class="social-body">If I had to rate <span class="mention">@boomnow</span>, it's a 10. The platform is really fast, much faster than the other guys.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/672e345493539f2f79c6e2ef_Ched.avif" alt="Chet Persaud" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Chet Persaud</h4>
+                            <p>@kfemanagement</p>
+                        </div>
+                    </div>
+                    <p class="social-body"><span class="mention">@boomnow</span> has revealed inefficiencies in our old way of working that we didn't even notice. Game changer!</p>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/6931665f6882edd2e0c5cf53_Freddy%2C%20Eason%20stays.avif" alt="Freddy" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Freddy</h4>
+                            <p>@easonstays</p>
+                        </div>
+                    </div>
+                    <p class="social-body"><span class="mention">@boomnow</span> allowed us to centralize all of our tech stacks which make it less confusing with the team and overall more efficient.</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/68dcf8b8b38ff6423301f585_Sab-avatar_zzzing.avif" alt="Sab Mulligan" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Sab Mulligan</h4>
+                            <p>@zzzing_malta</p>
+                        </div>
+                    </div>
+                    <p class="social-body">We're now in a position to attract creatives and true hospitality lovers to our team, because it is no longer a call center. Thanks <span class="mention">@boomnow</span>!</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/68c3f5953e39f1e2c28387a3_1755110636139.avif" alt="Jonathan Ellse" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Jonathan Ellse</h4>
+                            <p>@perchshortstays</p>
+                        </div>
+                    </div>
+                    <p class="social-body">The relationship with <span class="mention">@boomnow</span> has felt like more than just business. I've felt the genuine interest in helping us grow.</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/68b172c5974067ae1d7537c1_dean_euphoric-leisure_avatar.avif" alt="Dean McLuckie" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Dean McLuckie</h4>
+                            <p>@euphoricleisure</p>
+                        </div>
+                    </div>
+                    <p class="social-body"><span class="mention">@boomnow</span>'s support has been leagues ahead of any PMS we've used before. You don't feel like just another subscription.</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/685d20fdd0064da6a0629745_1728855846500.avif" alt="Joakim Thörn" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Joakim Thörn</h4>
+                            <p>@guestlyhomes</p>
+                        </div>
+                    </div>
+                    <p class="social-body">If I had to rate <span class="mention">@boomnow</span>, it's a 10. The platform is really fast, much faster than the other guys.</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-header">
+                        <img src="https://cdn.prod.website-files.com/662fac30060b5ddb24cdb7a1/672e345493539f2f79c6e2ef_Ched.avif" alt="Chet Persaud" class="social-avatar">
+                        <div class="social-author">
+                            <h4>Chet Persaud</h4>
+                            <p>@kfemanagement</p>
+                        </div>
+                    </div>
+                    <p class="social-body"><span class="mention">@boomnow</span> has revealed inefficiencies in our old way of working that we didn't even notice. Game changer!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO TESTIMONIAL CAROUSEL -->
+    <section class="video-testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Maximize your potential</h2>
+            </div>
+            <div class="video-carousel">
+                <!-- Slide 1 -->
+                <div class="video-slide active" data-video="https://www.youtube.com/watch?v=gtilrczT4eU">
+                    <a href="https://www.youtube.com/watch?v=gtilrczT4eU" target="_blank" rel="noopener" class="video-thumbnail-wrapper">
+                        <img src="https://i.ytimg.com/vi/gtilrczT4eU/maxresdefault.jpg" alt="Freddy testimonial">
+                        <div class="video-play-btn"></div>
+                    </a>
+                    <div class="video-quote-block">
+                        <p class="video-quote-text">"Boom allowed us to centralize all of our tech stacks which make it less confusing with the team and overall more efficient. It's transformed how we operate."</p>
+                        <div class="video-quote-author">
+                            <h4>Freddy</h4>
+                            <p>Founder, Eason Stays</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="video-slide" data-video="https://www.youtube.com/watch?v=iQMDlJ90cDQ">
+                    <a href="https://www.youtube.com/watch?v=iQMDlJ90cDQ" target="_blank" rel="noopener" class="video-thumbnail-wrapper">
+                        <img src="https://i.ytimg.com/vi/iQMDlJ90cDQ/maxresdefault.jpg" alt="Sab Mulligan testimonial">
+                        <div class="video-play-btn"></div>
+                    </a>
+                    <div class="video-quote-block">
+                        <p class="video-quote-text">"We're now in a position to attract creatives and true hospitality lovers to our team, because it is no longer a call center."</p>
+                        <div class="video-quote-author">
+                            <h4>Sab Mulligan</h4>
+                            <p>Head of Teams, Zzzing</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="video-slide" data-video="https://www.youtube.com/watch?v=DUyLmDtCO-I">
+                    <a href="https://www.youtube.com/watch?v=DUyLmDtCO-I" target="_blank" rel="noopener" class="video-thumbnail-wrapper">
+                        <img src="https://i.ytimg.com/vi/DUyLmDtCO-I/maxresdefault.jpg" alt="Jonathan Ellse testimonial">
+                        <div class="video-play-btn"></div>
+                    </a>
+                    <div class="video-quote-block">
+                        <p class="video-quote-text">"The relationship has felt like more than just business. I've felt the genuine interest in helping us grow."</p>
+                        <div class="video-quote-author">
+                            <h4>Jonathan Ellse</h4>
+                            <p>Managing Director, Perch Short Stays</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="video-slide" data-video="https://www.youtube.com/watch?v=dWDfKHqlU28">
+                    <a href="https://www.youtube.com/watch?v=dWDfKHqlU28" target="_blank" rel="noopener" class="video-thumbnail-wrapper">
+                        <img src="https://i.ytimg.com/vi/dWDfKHqlU28/maxresdefault.jpg" alt="Dean McLuckie testimonial">
+                        <div class="video-play-btn"></div>
+                    </a>
+                    <div class="video-quote-block">
+                        <p class="video-quote-text">"Boom's support has been leagues ahead of any PMS we've used before. You don't feel like just another subscription."</p>
+                        <div class="video-quote-author">
+                            <h4>Dean McLuckie</h4>
+                            <p>Founder, Euphoric Leisure</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="video-slide" data-video="https://www.youtube.com/watch?v=-qIGXfLvHZU">
+                    <a href="https://www.youtube.com/watch?v=-qIGXfLvHZU" target="_blank" rel="noopener" class="video-thumbnail-wrapper">
+                        <img src="https://i.ytimg.com/vi/-qIGXfLvHZU/maxresdefault.jpg" alt="Joakim Thörn testimonial">
+                        <div class="video-play-btn"></div>
+                    </a>
+                    <div class="video-quote-block">
+                        <p class="video-quote-text">"If I had to rate it, it's a 10. The platform is really fast, much faster than the other guys."</p>
+                        <div class="video-quote-author">
+                            <h4>Joakim Thörn</h4>
+                            <p>CEO, Guestly Homes</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="video-slide" data-video="https://www.youtube.com/watch?v=TXzXaa2cnVg">
+                    <a href="https://www.youtube.com/watch?v=TXzXaa2cnVg" target="_blank" rel="noopener" class="video-thumbnail-wrapper">
+                        <img src="https://i.ytimg.com/vi/TXzXaa2cnVg/maxresdefault.jpg" alt="Simon Pyne testimonial">
+                        <div class="video-play-btn"></div>
+                    </a>
+                    <div class="video-quote-block">
+                        <p class="video-quote-text">"They never say no. They always look for solutions. That attitude makes a big difference."</p>
+                        <div class="video-quote-author">
+                            <h4>Simon Pyne</h4>
+                            <p>Owner, PureServiced</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="carousel-nav">
+                    <button class="nav-btn" id="videoPrev">←</button>
+                    <div class="carousel-dots" id="videoDots"></div>
+                    <button class="nav-btn" id="videoNext">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BEFORE & AFTER -->
+    <section class="before-after">
+        <div class="container">
+            <h2>Before & After Boom</h2>
+            <div class="before-after-image">
+                <img src="sleep_old_new.jpeg.png" alt="Before and After using Boom">
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS -->
+    <section class="pain-points">
+        <div class="container">
+            <h2>Sounds Familiar?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">⏰</div>
+                    <h3>Your team is drowning in guest messages</h3>
+                    <p>Spending hours each day responding to the same questions over and over, leaving no time to grow your business.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">📱</div>
+                    <h3>Too many tools, no single source of truth</h3>
+                    <p>Juggling between 5+ platforms for bookings, accounting, guest comms, and reporting. Nothing talks to each other.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">📊</div>
+                    <h3>Revenue slipping through the cracks</h3>
+                    <p>No time to optimize pricing, upsell services, or analyze what's actually working across your portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION -->
+    <section class="transformation">
+        <div class="container">
+            <h2>Imagine instead...</h2>
+            <p class="transformation-subtitle">What your business looks like with Boom powering your operations</p>
+            <div class="transform-grid">
+                <div class="transform-item">
+                    <div class="transform-icon">🚀</div>
+                    <h3>AI handles 80% of guest messages</h3>
+                    <p>While you focus on growing your portfolio</p>
+                </div>
+                <div class="transform-item">
+                    <div class="transform-icon">📈</div>
+                    <h3>Revenue optimized automatically</h3>
+                    <p>Dynamic pricing that never sleeps</p>
+                </div>
+                <div class="transform-item">
+                    <div class="transform-icon">✨</div>
+                    <h3>5-star reviews become the norm</h3>
+                    <p>Guest experience that wows every time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-cta">
+                <a href="https://www.boomnow.com/see-boom-in-action" class="btn btn-primary">Book Your Demo →</a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-logo">Boom</div>
+                <p>The World's First AI-Powered Property Management System</p>
+                <p style="margin-top: 12px;"><a href="https://www.boomnow.com">boomnow.com</a></p>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 0.85rem;">© 2026 Boom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // VIDEO CAROUSEL (PRD 2)
+        // ============================================
+        const videoSlides = document.querySelectorAll('.video-slide');
+        const videoPrev = document.getElementById('videoPrev');
+        const videoNext = document.getElementById('videoNext');
+        const videoDotsContainer = document.getElementById('videoDots');
+
+        let currentVideoIndex = 0;
+        let videoAutoPlayInterval;
+        const totalVideoSlides = videoSlides.length;
+
+        // Create dots
+        videoSlides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToVideoSlide(index));
+            videoDotsContainer.appendChild(dot);
+        });
+
+        const videoDots = videoDotsContainer.querySelectorAll('.carousel-dot');
+
+        function updateVideoCarousel() {
+            videoSlides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentVideoIndex);
+            });
+            videoDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentVideoIndex);
+            });
+        }
+
+        function goToVideoSlide(index) {
+            currentVideoIndex = index;
+            updateVideoCarousel();
+            resetVideoAutoPlay();
+        }
+
+        function nextVideoSlide() {
+            currentVideoIndex = (currentVideoIndex + 1) % totalVideoSlides;
+            updateVideoCarousel();
+        }
+
+        function prevVideoSlide() {
+            currentVideoIndex = (currentVideoIndex - 1 + totalVideoSlides) % totalVideoSlides;
+            updateVideoCarousel();
+        }
+
+        videoPrev.addEventListener('click', () => {
+            prevVideoSlide();
+            resetVideoAutoPlay();
+        });
+
+        videoNext.addEventListener('click', () => {
+            nextVideoSlide();
+            resetVideoAutoPlay();
+        });
+
+        // Auto-advance every 6 seconds
+        function startVideoAutoPlay() {
+            videoAutoPlayInterval = setInterval(nextVideoSlide, 6000);
+        }
+
+        function resetVideoAutoPlay() {
+            clearInterval(videoAutoPlayInterval);
+            startVideoAutoPlay();
+        }
+
+        startVideoAutoPlay();
+
+    </script>
+
+</body>
+</html>
